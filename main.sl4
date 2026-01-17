@@ -1,0 +1,17 @@
+$target 9.\test.sbc
+
+menuList = ["Menu1", "Menu2", "Menu3"]
+menuIdx = 0
+
+loop
+    /// ㅇㄴㅌㅁ에 메뉴를 출력한다.
+    OLED << f"/0/b{menuList[menuIdx]}"
+    /// 버튼을 누를 때까지 대기한다.
+    while !(sw = InSwitch())
+    ///버튼 누른 값에 대하여 실행
+    if sw == BUTTON_2
+        menuIdx += 1
+        menuIdx %%= length(menuList)
+    elif sw == BUTTON_1
+        menuIdx -= 1
+        menuIdx %%= length(menuList)
