@@ -1,2 +1,4 @@
-.zig-cache/
-zig-out/
+.sbc-cache/
+sbc-out/
+.sac-cache/
+sac-out/
