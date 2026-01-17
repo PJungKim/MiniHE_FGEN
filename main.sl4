@@ -1,6 +1,6 @@
 $target 9.\test.sbc
 
-menuList = ["Power\nSupply", "Func\nGen", "Other"]
+menuList = ["/gPower\n/cSupply", "/gFunc\n/cGen", "/gOther"]
 
 menuIdx = 0
 

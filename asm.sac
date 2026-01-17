@@ -54,33 +54,30 @@ __copyconsthigh,2048(4);
 __copyptr1,0(FL);
 __ref1,0(REF3);
 __copy,4(1);
-__jf		[4]234881041;
-		__farg;
-		__copyconst, 768(4);
-		__copyptr, 36(MGL);
-		__farg;
-		__copyptr, 820(MGL);
-		__jfunc, str$ref(MEM);
-		__farg;
-		__copyptr, 836(MGL);
-		__jfunc, str$ref(MEM);
-		__farg;
-		__copyptr, 848(MGL);
-		__jfunc, str$ref(MEM);
-		[4]234881041;
-		__farg;
-		__copyconst, 12(4);
-		__copyptr, 804(MGL);
-		__farg;
-		__copyconst, 0(4);
-		[4]251674769;
-		__farg;
-	loop:
-	GLOBAL_End__:
-	WaitKey:
-	Init$OLED_t$int$int$int$int:
-	str$ref:
-(0);
+__jfuncx,Begin$serial$int(MEM);
+__ref11,0(FL);
+__copy,32(1);
+__endfunc,32;
+__endfunc1,0;
+FTDI_Serial$int:
+__mset,32;
+__copyconst1,4(4);
+__copyptr,0(FL);
+__copyconst,18(0);
+__copyconsthigh,2048(4);
+[4]234881041;
+__copyconst1,4(4);
+__copyptr,4(FL);
+__copyconst,12306(0);
+__copyconsthigh,2048(4);
+[4]234881041;
+__copyconst1,4(4);
+__copyptr,8(FL);
+__copyconstjfunc,FTDI_Scan$ref(MEM);
+[4]234881041;
+__copyconst1,4(4);
+__copyptr,12(FL);
+__copyconst,24594(0);
 __copyconsthigh,2048(4);
 [4]234881041;
 __copyconst1,4(4);
@@ -212,90 +209,85 @@ __jfunc,FTDI_Serial$int(MEM);
 __copyconst1,768(4);
 __copyptr,100(MGL);
 __copyptr1,1896(MGL);
-__jfu		[4]234881041;
-	$BREA$0003:
-		__jump, $BREA$0004(MEM);
-	$ELSE$0003:
-	$CONT$0004:
-		__farg;
-		__farg;
-		__ref1, 0(FL);
-		__copy, 4(1);
-		__copyconst, 32(4);
-		[4]17182864;
-		__nbranch, $ELSE$0004(MEM);
-	$AGAI$0004:
-		__farg;
-		__copyptr, 0(MGL);
-		__jfuncx, Clear$OLED_t(MEM);
-	$CONT$0005:
-		__farg;
-		__copyconst, 1(4);
-		__nbranch, $ELSE$0005(MEM);
-	$AGAI$0005:
-	$CONT$0006:
-		__farg;
-		__farg;
-		__ref1, 804(MGL);
-		__copy, 4(1);
-		__copyconst, 1(4);
-		[4]17182864;
-		__nbranch, $ELSE$0006(MEM);
-	$AGAI$0006:
-		__farg;
-		__jfuncx, FunctionGen(MEM);
-	GLOBAL_End__:
-	WaitKey:
-	Init$OLED_t$int$int$int$int:
-	str$ref:
-	str$int:
-	$add$ref$str:
-	$add$str$ref:
-	$shl$OLED_t$str:
-	$add$ref$ref:
-	InSwitch:
-	Clear$OLED_t:
-	$mod2$int$int:
-	FunctionGen:
-MEM);
+__jfunc,str$ref(MEM);
+__copyptr1,1916(MGL);
+__jfunc,str$ref(MEM);
+__copyptr1,1932(MGL);
+__jfunc,str$ref(MEM);
+[4]234881041;
+__copyconst1,1024(4);
+__copyptr,872(MGL);
+__copyptr1,1940(MGL);
+__jfunc,str$ref(MEM);
+__copyptr1,1956(MGL);
+__jfunc,str$ref(MEM);
+__copyptr1,1972(MGL);
+__jfunc,str$ref(MEM);
+__copyptr1,1988(MGL);
+__jfunc,str$ref(MEM);
+[4]234881041;
+__endfunc1,0;
+loop:
+__farg, 1;
+__copyptr,0(MGL);
+__farg, 1;
+__copyptr,2004(MGL);
+__ref11,868(MGL);
+__copy,4(1);
+__jfunc,str$int(MEM);
 __jfunc,$add$ref$str(MEM);
+__copyptr,2020(MGL);
+__jfunc,$add$str$ref(MEM);
+__jfunc,$shl$OLED_t$str(MEM);
+__farg, 1;
 __copyptr,2024(MGL);
+__farg, 1;
+__copyptr,100(MGL);
+__copyconst1,256(4);
+__ref1,868(MGL);
+__copy,4(1);
+[4]16842896;
+[4]16973968;
+__jfunc,str$ref(MEM);
+__jfunc,$add$ref$str(MEM);
+__copyptr,2032(MGL);
 __jfunc,$add$str$ref(MEM);
 __jfuncx,$shl$OLED_t$str(MEM);
 __copyptr1,0(MGL);
-__copyptr1,2028(MGL);
-__copyptr,2032(MGL);
+__copyptr1,2036(MGL);
+__copyptr,2040(MGL);
 __jfunc,$add$ref$ref(MEM);
 __jfuncx,$shl$OLED_t$str(MEM);
 __mset,4;
 $CONT$0002:
-__farg, 2		[4]234881041;
-		__farg;
-		__copyconst, 768(4);
-		__copyptr, 100(MGL);
-		__farg;
-		__copyptr, 884(MGL);
-		__jfunc, str$ref(MEM);
-		__farg;
-		__copyptr, 900(MGL);
-		__jfunc, str$ref(MEM);
-		__farg;
-		__copyptr, 912(MGL);
-		__jfunc, str$ref(MEM);
-		[4]234881041;
-		__farg;
-		__copyconst, 12(4);
-		__copyptr, 868(MGL);
-		__farg;
-		__copyconst, 0(4);
-		[4]251674769;
-		__farg;
-	loop:
-	GLOBAL_End__:
-	WaitKey:
-	Init$OLED_t$int$int$int$int:
-	str$ref:
-4881041;
+__farg, 2;
+__copyconst,4(4);
+__copyptr,0(FL);
+__jfunc1,InSwitch(MEM);
+[4]234881169;
+[4]65680;
+__nbranch,$ELSE$0002(MEM);
+$AGAI$0002:
+__jump,$CONT$0002(MEM);
+$BREA$0002:
+$ELSE$0002:
+$CONT$0003:
+__farg, 1;
+__ref1,0(FL);
+__copy,4(1);
+__copyconst,64(4);
+[4]17182864;
+__nbranch,$ELSE$0003(MEM);
+$AGAI$0003:
+__copyptr1,0(MGL);
+__jfuncx,Clear$OLED_t(MEM);
+__copyconst1,4(4);
+__copyptr,868(MGL);
+__ref11,868(MGL);
+__copy,4(1);
+__copyconst,1(4);
+[4]16973968;
+[4]234881041;
 __copyconst1,4(4);
 __copyptr,868(MGL);
 __ref11,868(MGL);
@@ -434,52 +426,58 @@ __copyconst,24(4);
 __copyconst,1(4);
 [4]234881041;
 __copyconst1,4(4);
-__		[4]234881041;
-	$BREA$0004:
-		__jump, $BREA$0005(MEM);
-	$ELSE$0004:
-	$CONT$0005:
-		__farg;
-		__farg;
-		__ref1, 0(FL);
-		__copy, 4(1);
-		__copyconst, 32(4);
-		[4]17182864;
-		__nbranch, $ELSE$0005(MEM);
-	$AGAI$0005:
-		__farg;
-		__copyptr, 0(MGL);
-		__jfuncx, Clear$OLED_t(MEM);
-	$CONT$0006:
-		__farg;
-		__copyconst, 1(4);
-		__nbranch, $ELSE$0006(MEM);
-	$AGAI$0006:
-	$CONT$0007:
-		__farg;
-		__farg;
-		__ref1, 868(MGL);
-		__copy, 4(1);
-		__copyconst, 1(4);
-		[4]17182864;
-		__nbranch, $ELSE$0007(MEM);
-	$AGAI$0007:
-		__farg;
-		__jfuncx, FunctionGen(MEM);
-	GLOBAL_End__:
-	WaitKey:
-	Init$OLED_t$int$int$int$int:
-	str$ref:
-	str$int:
-	$add$ref$str:
-	$add$str$ref:
-	$shl$OLED_t$str:
-	$add$ref$ref:
-	InSwitch:
-	Clear$OLED_t:
-	$mod2$int$int:
-	FunctionGen:
-const,0(4);
+__ref11,0(REF3);
+__copy,4(1);
+__copyconst,28(4);
+[4]16973968;
+__copyconst,1(4);
+[4]234881041;
+__copyconst1,4(4);
+__ref11,0(REF3);
+__copy,4(1);
+__copyconst,32(4);
+[4]16973968;
+__copyconst,0(4);
+[4]234881041;
+__farg, 2;
+__ref1,0(REF3);
+__copy,4(1);
+__copyconst,0(4);
+[4]16973968;
+[4]589968;
+__farg, 1;
+__ref1,0(REF3);
+__copy,4(1);
+__copyconst,4(4);
+[4]16973968;
+[4]589968;
+__farg, 1;
+__ref1,0(REF3);
+__copy,4(1);
+__copyconst,8(4);
+[4]16973968;
+[4]589968;
+__farg, 1;
+__ref1,0(REF3);
+__copy,4(1);
+__copyconst,12(4);
+[4]16973968;
+[4]589968;
+__copyconst,1(4);
+[4]2117650;
+__farg, 2;
+__ref1,0(REF3);
+__copy,4(1);
+__copyconst,32(4);
+[4]16973968;
+[4]589968;
+[4]2142226;
+__copyconst1,0(4);
+__ref11,12(REF3);
+__copy,4(1);
+__copyconst,1(4);
+[4]17039504;
+__copyconst,0(4);
 __ref11,16(REF3);
 __copy,4(1);
 __copyconst,1(4);
@@ -491,7 +489,7 @@ __copyconst,20(4);
 [4]16973968;
 [4]589968;
 [4]2555922;
-__copyptr1,2060(MGL);
+__copyptr1,2068(MGL);
 [4]2187282;
 __endfunc1,0;
 str$ref:
@@ -506,7 +504,7 @@ __copyconst,0(4);
 __nbranch,$ELSE$0009(MEM);
 $AGAI$0009:
 __copyptr1,0(FL);
-__copyptr,2064(MGL);
+__copyptr,2072(MGL);
 [4]33636369;
 __ref11,0(FL);
 __copy,256(1);
@@ -528,7 +526,7 @@ __nbranch,$ELSE$0010(MEM);
 $AGAI$0010:
 __copyconst1,256(4);
 __copyptr,0(FL);
-__copyptr1,2072(MGL);
+__copyptr1,2080(MGL);
 __ref1,0(REF3);
 __copy,4(1);
 [4]209041;
@@ -548,7 +546,7 @@ __endfunc,256;
 __endfunc1,0;
 str$int:
 __farg, 1;
-__copyptr,2076(MGL);
+__copyptr,2084(MGL);
 __ref1,0(REF3);
 __copy,4(1);
 [4]209041;
@@ -680,7 +678,7 @@ __copyconst,20(4);
 [4]16973968;
 [4]589968;
 [4]2555922;
-__copyptr1,2080(MGL);
+__copyptr1,2088(MGL);
 [4]2187282;
 __copyconst1,4(4);
 __ref11,0(REF3);
@@ -735,16 +733,16 @@ $AGAI$0012:
 __farg, 1;
 __copyptr,0(MGL);
 __farg, 1;
-__copyptr,2084(MGL);
+__copyptr,2092(MGL);
 __ref11,0(FL);
 __copy,4(1);
 __jfunc,str$int(MEM);
 __jfunc,$add$ref$str(MEM);
-__copyptr,2096(MGL);
+__copyptr,2104(MGL);
 __jfunc,$add$str$ref(MEM);
 __jfunc,$shl$OLED_t$str(MEM);
 __farg, 1;
-__copyptr,2100(MGL);
+__copyptr,2108(MGL);
 __farg, 1;
 __copyptr,872(MGL);
 __copyconst1,256(4);
@@ -754,7 +752,7 @@ __copy,4(1);
 [4]16973968;
 __jfunc,str$ref(MEM);
 __jfunc,$add$ref$str(MEM);
-__copyptr,2108(MGL);
+__copyptr,2116(MGL);
 __jfunc,$add$str$ref(MEM);
 __jfuncx,$shl$OLED_t$str(MEM);
 __mset,4;
@@ -902,7 +900,7 @@ __copyconst,28(4);
 [4]589968;
 [4]2125842;
 __farg, 3;
-__copyptr,2112(MGL);
+__copyptr,2120(MGL);
 __farg, 1;
 __ref1,0(REF3);
 __copy,4(1);
@@ -910,7 +908,7 @@ __copyconst,16(4);
 [4]16973968;
 [4]589968;
 [4]209041;
-__copyptr1,2120(MGL);
+__copyptr1,2128(MGL);
 __farg, 1;
 __ref1,0(REF3);
 __copy,4(1);
@@ -960,9 +958,9 @@ __endfunc1,0;
 [256]0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
 [256]0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
 [256]0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
-[16]"Power\nSupply";
-[12]"Func\nGen";
-[8]"Other";
+[20]"/gPower\n/cSupply";
+[16]"/gFunc\n/cGen";
+[8]"/gOther";
 [16]"D//A\n/cCALI";
 [16]"A//D\n/cCALI";
 [16]"Voltage\n/cTest";
