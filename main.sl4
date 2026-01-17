@@ -1,6 +1,6 @@
 $target 9.\test.sbc
 
-menuList = ["Menu1", "Menu2", "Menu3"]
+menuList = ["Menu1", "Menu2", "Menu3", "/yMenu4"]
 menuIdx = 0
 
 loop
