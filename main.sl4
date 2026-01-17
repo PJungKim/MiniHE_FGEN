@@ -1,17 +1,58 @@
 $target 9.\test.sbc
 
-menuList = ["Menu1", "Menu2", "Menu3", "/yMenu4"]
+menuList = ["Power\nSupply", "Func\nGen", "Other"]
+
 menuIdx = 0
+
+##BUTTON_OUT(BUTTON_1)
+##BUTTON_TAB(BUTTON_2)
+##BUTTON_DOWN(BUTTON_3)
+##BUTTON_BACK(BUTTON_5)
+##BUTTON_ENTER(BUTTON_6)
+##BUTTON_UP(BUTTON_7)
+
+
 
 loop
     /// ㅇㄴㅌㅁ에 메뉴를 출력한다.
-    OLED << f"/0/b{menuList[menuIdx]}"
+    OLED << f"/0/rMenu - /y{menuIdx}:" <<f"/1/A/b{menuList[menuIdx]}"
+    OLED << f"/6/w6번을 눌러 실행."
     /// 버튼을 누를 때까지 대기한다.
     while !(sw = InSwitch())
     ///버튼 누른 값에 대하여 실행
-    if sw == BUTTON_2
-        menuIdx += 1
+    if sw == BUTTON_UP                /// UP 버튼 누를 때
+        OLED.Clear
+        menuIdx += 1                  /// 메뉴 인덱스값 증가
         menuIdx %%= length(menuList)
-    elif sw == BUTTON_1
-        menuIdx -= 1
+    elif sw == BUTTON_DOWN            /// DOWN 버튼 누를 때
+        OLED.Clear
+        menuIdx -= 1                  /// 메뉴 인덱스값 감소
         menuIdx %%= length(menuList)
+    elif sw == BUTTON_ENTER           /// Enter 버튼 누를 때
+        OLED.Clear
+        when menuIdx:
+            case 1: FunctionGen();    ///함수 발생기 메뉴 실행
+        OLED.Clear
+
+
+fgenList = ["D//A\n/cCALI", "A//D\n/cCALI", "Voltage\n/cTest", "Set\n/cParam"]
+
+FunctionGen
+    fidx = 0
+    while 1
+        OLED << f"/0/lFGEN - {fidx}" << f"/1/A/g{fgenList[fidx]}"
+        while !(sw = InSwitch())
+        if sw == BUTTON_UP
+            OLED.Clear
+            fidx += 1
+            fidx %%= length(fgenList)
+        elif sw == BUTTON_DOWN
+            OLED.Clear
+            fidx -= 1
+            fidx %%= length(fgenList)
+        elif sw == BUTTON_BACK
+            break
+
+
+
+

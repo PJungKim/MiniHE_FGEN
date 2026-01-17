@@ -27,6 +27,15 @@ SW와의 협업을 위한 Git 공간입니다.
   |A3|ADC|강|
   |A4|DAC|강|
 
+- 버튼 할당표
+  - 버튼은 1, 2, 3, 5, 6, 7 모두 사용한다.
+  - 버튼 할당표는 아래와 같다.
+    |버튼|기능|버튼|기능|
+    |---|---|---|---|
+    |1|출력|5|뒤로|
+    |2|탭|6|Enter|
+    |3|-|7|+|
+
 ## 시나리오 논의
 
 ### 1. 함수 발생기쪽
@@ -54,6 +63,44 @@ SW와의 협업을 위한 Git 공간입니다.
 - 파라미터 : 출력 전압 하나면 끝
 - 일반 파워서플라이 벤치마킹 : 전류측정기능이랑 출력전압 감지기능 ㅇㄴㅌㅁ에 표시
 
+## 메뉴
 
+- 스위치를 어떻게 쓰는지....
+  - 1, 2, 3, 5, 6, 7 : 파워쪽 회로 설계자가 스위치를 6개 다 박으면 이렇게 쓰고, 스위치를 일부만 박으면 조금 달라질 수 있음.
+  - 6개 다 쓰는 경우
+
+
+- 메뉴
+  - 대분류 : 파워서플라이부문 / 함수 발생기 부문 / 잡다한 설정(버튼누르는거, 유아트 통신 설정 뭐 그런거)
+    - Starlit 소스 코드
+      ```Py
+      menuList = ["Power\nSupply", "Func\nGen", "Other"]
+      menuFunc = [NULL, NULL, NULL]
+      menuIdx = 0
+
+      loop
+          /// ㅇㄴㅌㅁ에 메뉴를 출력한다.
+          OLED << f"/0/rMenu - /y{menuIdx}:" <<f"/1/A/b{menuList[menuIdx]}"
+          /// 버튼을 누를 때까지 대기한다.
+          while !(sw = InSwitch())
+          ///버튼 누른 값에 대하여 실행
+          if sw == BUTTON_2
+              menuIdx += 1
+              menuIdx %%= length(menuList)
+          elif sw == BUTTON_1
+              menuIdx -= 1
+              menuIdx %%= length(menuList)
+      ```
+
+
+
+
+
+|번호|OLED 출력|기능|
+|--|--|--|
+|1|`DA Calibration`|DAC 출력 눈금 조정|
+|2|`AD Calibration`|ADC 출력 눈금 조정|
+|3|`Voltage Test`|함수 발생기에 출력되는 전압이 맞는지 테스트합니다.|
+|4|`Set Parameter`|파라미터 값을 수정합니다.|
 
 
