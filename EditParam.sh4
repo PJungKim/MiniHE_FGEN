@@ -1,0 +1,29 @@
+
+
+
+EditInt(variable:_int, Digits:int)
+    tab = 0
+    delta = 1
+    strf = "/A/c%" + "%d" % Digits + "d"
+    while 1
+        OLED.Clear
+        OLED << strf % variable
+        OLED << "/2"
+        for(i=0,i<(Digits-tab-1),i+=1)
+            OLED << "/A "
+        OLED << "/A^"
+        while !(sw = InSwitch())
+        if sw == BUTTON_TAB
+            tab += 1
+            delta *= 10
+            if tab == Digits
+                tab = 0
+                delta = 1
+        elif sw == BUTTON_UP
+            variable += delta
+        elif sw == BUTTON_DOWN
+            variable -= delta
+        elif sw == BUTTON_BACK || sw == BUTTON_ENTER
+            break
+            
+            

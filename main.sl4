@@ -1,4 +1,7 @@
+
 $target 9.\test.sbc
+$import FGEN.sh4
+
 
 menuList = ["/gPower\n/cSupply", "/gFunc\n/cGen", "/gOther"]
 
@@ -35,23 +38,6 @@ loop
         OLED.Clear
 
 
-fgenList = ["D//A\n/cCALI", "A//D\n/cCALI", "Voltage\n/cTest", "Set\n/cParam"]
-
-FunctionGen
-    fidx = 0
-    while 1
-        OLED << f"/0/lFGEN - {fidx}" << f"/1/A/g{fgenList[fidx]}"
-        while !(sw = InSwitch())
-        if sw == BUTTON_UP
-            OLED.Clear
-            fidx += 1
-            fidx %%= length(fgenList)
-        elif sw == BUTTON_DOWN
-            OLED.Clear
-            fidx -= 1
-            fidx %%= length(fgenList)
-        elif sw == BUTTON_BACK
-            break
 
 
 

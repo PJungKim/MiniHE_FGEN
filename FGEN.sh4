@@ -1,0 +1,49 @@
+
+
+fgenList = ["D//A\n/cCALI", "A//D\n/cCALI", "Voltage\n/cTest", "Set\n/cParam"]
+
+$import EditParam.sh4
+
+FunctionGen
+    fidx = 0
+    while 1
+        OLED << f"/0/lFGEN - {fidx}" << f"/1/A/g{fgenList[fidx]}"
+        while !(sw = InSwitch())
+        if sw == BUTTON_UP
+            OLED.Clear
+            fidx += 1
+            fidx %%= length(fgenList)
+        elif sw == BUTTON_DOWN
+            OLED.Clear
+            fidx -= 1
+            fidx %%= length(fgenList)
+        elif sw == BUTTON_ENTER
+            OLED.Clear
+            a = 0
+            EditInt(a, 6)
+        elif sw == BUTTON_OUT
+            ///함수 발생기 출력 활성화 코드 추가.
+            ///해당 코드는 studio의 vit6에 있는거 갖다 쓰세요.
+        elif sw == BUTTON_BACK
+            break
+
+///Calibration 진행
+///연결도 : FGEN 출력 - Isolation 차단 - ADC IN(정밀저항 전압분배)
+
+
+
+
+
+
+
+
+///추가했으면 좋겠는 아이디어??
+///함수 발생기 파라미터
+FGEN_vpp = 0.0
+FGEN_offs = 0.0
+FGEN_freq = 0.0
+FGEN_d1 = 0.0
+FGEN_d2 = 0.0
+FGEN_d3 = 0.0
+
+
